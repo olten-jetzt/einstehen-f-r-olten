@@ -49,8 +49,14 @@ layout: mosaic
                 <img data-src="{{"/assets/bg/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
               </div>
               {% endif %}
-              <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.name }} ({{ link.datum | date: "%d.%m.%Y" }})</div>
-              <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.funktion }} - {{ link.verein }}</div>
+              <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.name }} ({{ link.datum | date: "%d.%m.%Y" }})</br>
+                 {% if link.bild %}
+                   {{ link.funktion }}
+                 {% endif %}
+                 {% if link.verein %}
+                 - {{ link.verein }}
+                 {% endif %}
+              </div>
               <div>{{ link.text | markdownify }}</div>
             </div>
             <div class="uk-position-top-right uk-padding-small">
