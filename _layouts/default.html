@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "de-CH" }}">
+
+  <head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,maximum-scale=2"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="heimschulung.ch" />
+    <meta property="og:description" content="Eine Sammlung von Ressourcen für das Lernen zu Hause. Für Eltern und Kinder." />
+    <meta property="og:image" content="https://heimschulung.ch/heimschulung.jpg" />
+    <meta property="fb:app_id" content="252010635818556" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <style>
+      #header_wrap {
+        background-image: url(/heimschulung.jpg);
+        background-size: cover;
+        background-position: bottom;
+        position: relative;
+      }
+      #header_wrap::before {
+        background: hsla(0, 0%, 0%, 0.37);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        display: block;
+      }
+      #header_wrap h1 a {
+        color: inherit;
+      }
+      #forkme_banner {
+        background-color: #929292;
+      }
+      #header_wrap .inner {
+        z-index: 12;
+        padding: 120px 10px 10px 10px;
+      }
+      #comment_title {
+        margin-top: 4ex;
+        font-weight: bold;
+      }
+      
+      .fb-comments {
+        margin-left: -8px;
+        margin-right: -8px;
+      }
+    </style>
+{% seo %}
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="{{ site.github.repository_url }}/edit/master/{{page.path}}">Edit on GitHub</a>
+          <h1 id="project_title"><a href="/">{{ site.title | default: site.github.repository_name }}</a></h1>
+          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        {{ content }}
+        <div id="comment_title">Weitere Links, Ideen oder Rückmeldungen können sie auf der <a href="comments.html">Kommentarseite</a> hinterlassen. </div>
+       </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Maintained by <a href="https://tobi.oetiker.ch">Tobi Oetiker</a> &lt;tobi@oetiker.ch&gt; and <a href="https://www.facebook.com/martina.friker">Martina Friker</a>.</p>
+      </footer>
+    </div>
+
+    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+    <script>
+    (function(f, a, t, h, o, m){
+      a[h]=a[h]||function(){
+        (a[h].q=a[h].q||[]).push(arguments)
+      };
+      o=f.createElement('script'),
+      m=f.getElementsByTagName('script')[0];
+      o.async=1; o.src=t; o.id='fathom-script';
+      m.parentNode.insertBefore(o,m)
+    })(document, window, '//analytics.oetiker.ch/tracker.js', 'fathom');
+    fathom('set', 'siteId', 'KXVIU');
+    fathom('trackPageview');
+    </script>
+    <!-- / Fathom -->
+    
+  
+  </body>
+</html>

@@ -1,0 +1,26 @@
+---
+---
+// 1. Your custom variables and variable overwrites.
+$global-color: #000;
+$primary-color: #000;
+$global-font-family: Roboto, sans-serif;
+
+// 2. Import default variables and available mixins.
+@import "variables-theme.scss";
+
+// since this depends on an other varia le
+$overlay-default-background: rgba($global-background, 0.7);
+
+
+@import "mixins-theme.scss";
+
+
+// 3. Your custom mixin overwrites.
+// @mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "uikit-theme.scss";
+
+.select-shadow {
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
