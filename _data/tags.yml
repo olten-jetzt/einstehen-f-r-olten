@@ -13,3 +13,6 @@ kunst:
 bildung:
   icon: fas fa-language
   titl: Bildung
+gewerbe:
+  icon: fas fa-microscope
+  titl: Gewerbe
