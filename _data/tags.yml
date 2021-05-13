@@ -10,3 +10,6 @@ politik:
 kunst:
   icon: fas fa-theater-masks
   titl: Kunst
+bildung:
+  icon: fas fa-language
+  titl: Bildung
