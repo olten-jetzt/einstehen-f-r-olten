@@ -1,9 +1,15 @@
-titl: Investition in die Zukunft
-date: 2021-05-13
+titel: Investition in die Zukunft
+datum: 2021-05-13
 name: Fritz Zaucker
-# href: https://www.waldexperiment.ch/waldexperiment-in-zeiten-der-corona-pandemie
-pict: no
+url: https://www.zaucker.ch
+email: fritz@zaucker.ch
+verein: Lila Kuh Olten
+funktion: Vater von 4 Kindern
+bild: no
 tags:
  - person
-desc: |
-  bla bla bla ...
+kurztext: Kurztext steht hier ...
+text: |
+  bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla
+
+  bla bla blabla bla blabla bla blabla bla blabla bla bla ...

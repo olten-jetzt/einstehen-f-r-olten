@@ -39,20 +39,20 @@ layout: mosaic
       {% for link_hash in site.data.links %}
       {% assign file = link_hash[0] %}
       {% assign link = link_hash[1] %}
-      <li data-tags="{% for tag in link.tags %}{{ tag }} {% endfor %}" data-date="{{ link.date }}"">
+      <li data-tags="{% for tag in link.tags %}{{ tag }} {% endfor %}" data-date="{{ link.datum }}"">
         <div class=" uk-card uk-card-default">
-          <a href="{{ link.href }}" class="uk-link-reset" target="_blank">
+          <a href="{{ link.url }}" class="uk-link-reset" target="_blank">
             <div class="uk-card-body">
-              <div class="uk-text-large uk-margin-small-top">{{ link.titl }}</div>
-              <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.name }} ({{ link.date | date: "%d.%m.%Y" }})</div>
-              <div>{{ link.desc }}</div>
+              <div class="uk-text-large uk-margin-small-top">{{ link.titel }}</div>
+              <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.name }} ({{ link.datum | date: "%d.%m.%Y" }})</div>
+              <div>{{ link.desc | markdownify }}</div>
             </div>
             <div class="uk-position-top-right uk-padding-small">
               {% for tag in link.tags %}
               &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
               {% endfor %}
             </div>
-            {% if link.pict %}
+            {% if link.bild %}
             <div class="uk-card-media-bottom">
               <img data-src="{{"/assets/bg/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
             </div>
