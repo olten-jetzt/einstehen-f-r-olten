@@ -1,78 +1,12 @@
-alltag:
+person:
   icon: fas fa-home
-  titl: Kinder Zuhause
-math:
-  icon: fas fa-square-root-alt
-  titl: Mathematik
-sprache:
-  icon: fas fa-language
-  titl: Sprache
-nmg:
-  icon: fas fa-microscope
-  titl: NMG
+  titl: Personen
 sport:
   icon: fas fa-running
   titl: Sport
-unterhaltung:
+politik:
   icon: far fa-tv-retro
-  titl: Unterhaltung
-creative:
+  titl: Politik
+kunst:
   icon: fas fa-theater-masks
-  titl: Kreativität
-cool:
-  icon: fal fa-sunglasses
-  titl: Cool Skills
-corona:
-  icon: fas fa-virus
-  titl: COVID-19
-collection:
-  icon: fas fa-list
-  titl: Link Sammlung
-app:
-  icon: fas fa-mobile-alt
-  titl: Mobile App
-daily:
-  icon: fas fa-sun
-  titl: Regelmässig neue Inhalte
-live:
-  icon: fas fa-video
-  titl: Live Veranstaltungen
-printable:
-  icon: far fa-file-pdf
-  titl: Zum Ausdrucken
-cooking:
-  icon: far fa-cauldron
-  titl: Kochen
-  hide: yes
-coding:
-  icon: fas fa-laptop-code
-  titl: Programmieren
-  hide: yes
-story:
-  icon: fas fa-frog
-  titl: Geschichten
-  hide: yes
-video:
-  icon: fas fa-tv
-  titl: Videos
-  hide: yes
-create:
-  icon: fas fa-plus-square
-  titl: Unterrichtsmaterial Erstellen
-  hide: yes
-skill:
-  icon: fas fa-toolbox
-  titl: Neue Fähigkeiten
-  hide: yes
-ios:
-  icon: fab fa-app-store-ios
-  titl: iOS
-  hide: yes
-android:
-  icon: fab fa-android
-  titl: Android
-  hide: yes
-web:
-  icon: far fa-browser
-  titl: Online App
-  hide: yes
+  titl: Kunst
