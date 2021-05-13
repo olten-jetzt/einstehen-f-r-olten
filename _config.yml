@@ -1,5 +1,5 @@
-title: heimschulung.ch
-description: Eine Sammlung von Ressourcen für das Lernen zu Hause.
+title: Pro Schulanlage Kleinholz
+description: Ueberparteiliches Unterstuetzungskommittee
 theme: jekyll-theme-slate
 sass:
     style: compressed
@@ -20,7 +20,7 @@ sass:
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-email: "tobi@oetiker.ch"
+email: "fritz.zaucker@oetiker.ch"
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
