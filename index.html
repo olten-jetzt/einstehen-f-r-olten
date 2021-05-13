@@ -44,6 +44,11 @@ layout: mosaic
           <a href="{{ link.url }}" class="uk-link-reset" target="_blank">
             <div class="uk-card-body">
               <div class="uk-text-large uk-margin-small-top">{{ link.titel }}</div>
+              {% if link.bild %}
+              <div class="uk-card-media-bottom">
+                <img data-src="{{"/assets/bg/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
+              </div>
+              {% endif %}
               <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.name }} ({{ link.datum | date: "%d.%m.%Y" }})</div>
               <div>{{ link.text | markdownify }}</div>
             </div>
@@ -52,11 +57,6 @@ layout: mosaic
               &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
               {% endfor %}
             </div>
-            {% if link.bild %}
-            <div class="uk-card-media-bottom">
-              <img data-src="{{"/assets/bg/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
-            </div>
-            {% endif %}
           </a>
           <div class="uk-position-bottom-right uk-padding-small">
             <a style="color: rgba(128,128,128,0.2)"
