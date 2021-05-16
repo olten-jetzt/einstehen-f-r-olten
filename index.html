@@ -53,8 +53,8 @@ layout: mosaic
                 <div style="font-size: 3rem" class="uk-align-right"><a href="#popup-{{ file }}" uk-toggle><i class="fas fa-info-circle"></i></a></div>
                 {% endif %}
             </div>
-            <div class="sh-author uk-margin-small-top  uk-margin-bottom"><div>{{ link.name }}</div>
-            <div class="uk-text-meta sh-author">
+            <div class="sh-author uk-margin-small-top"><div>{{ link.name }}</div>
+            <div class="uk-text-meta">
                  {% if link.funktion %}
                    {{ link.funktion }}
                  {% endif %}
@@ -66,25 +66,23 @@ layout: mosaic
             {% if link.text %}
             <div id="popup-{{ file }}" class="uk-flex-top"  uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-
                     <button class="uk-modal-close-default" type="button" uk-close></button>
                     <h2 class="uk-modal-title">{{ link.titel }}</h2>
-                    <div class="uk-margin-small-top  uk-margin-bottom"><div>{{ link.name }}</div>
-                    <div class="uk-text-meta">
-                        {% if link.funktion %}
-                          {{ link.funktion }}
-                        {% endif %}
-                        {% if link.verein %}
-                        - {{ link.verein }}
-                        {% endif %}
-                     </div>
+                    <div class="uk-margin-small-top"><div>{{ link.name }}</div>
+                        <div class="uk-text-meta">
+                            {% if link.funktion %}
+                            {{ link.funktion }}
+                            {% endif %}
+                            {% if link.verein %}
+                            - {{ link.verein }}
+                            {% endif %}
+                        </div>
                      </div>
                     {{ link.text | markdownify }}
                     <div class="uk-text-right">{{ link.datum | date: "%d.%m.%Y" }}</div>
                 </div>
             </div>
             {% endif %}
-            </div>
             <div class="uk-position-top-right uk-text-muted uk-padding-small" style="text-shadow: 0px 0px 16px #ffffffbf;">
               {% for tag in link.tags %}
               &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
