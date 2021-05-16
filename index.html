@@ -63,6 +63,11 @@ layout: mosaic
                  {% endif %}
               </div>
             </div>
+            <div class="uk-position-top-right uk-text-muted uk-padding-small" style="text-shadow: 0px 0px 16px #ffffffbf;">
+                {% for tag in link.tags %}
+                &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
+                {% endfor %}
+            </div>
             {% if link.text %}
             <div id="popup-{{ file }}" class="uk-flex-top"  uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -83,12 +88,6 @@ layout: mosaic
                 </div>
             </div>
             {% endif %}
-            <div class="uk-position-top-right uk-text-muted uk-padding-small" style="text-shadow: 0px 0px 16px #ffffffbf;">
-              {% for tag in link.tags %}
-              &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
-              {% endfor %}
-            </div>
-          </a>
         </div>
       </li>
       {% endfor %}
