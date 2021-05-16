@@ -1,6 +1,7 @@
 title: Pro Schulanlage Kleinholz
 description: Überparteiliches Unterstützungskomitee
-theme: jekyll-theme-slate
+site:
+  lang: de
 sass:
     style: compressed
     sass_dir: _sass
@@ -27,12 +28,12 @@ email: "fritz.zaucker@oetiker.ch"
 #github_username:  jekyll
 
 # Build settings
-plugins:
+#plugins:
 #  - jekyll-feed
 #  - jekyll-sitemap
 
 # A list of the pages to display in the navigation bar
-header_pages:
+#header_pages:
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

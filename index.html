@@ -41,15 +41,20 @@ layout: mosaic
       {% assign link = link_hash[1] %}
       <li data-tags="{% for tag in link.tags %}{{ tag }} {% endfor %}" data-date="{{ link.datum }}"">
         <div class=" uk-card uk-card-default">
-          <a href="{{ link.url }}" class="uk-link-reset" target="_blank">
-            <div class="uk-card-body">
-              <div class="uk-text-large uk-margin-small-top">{{ link.titel }}</div>
-              {% if link.bild %}
-              <div class="uk-card-media-bottom">
-                <img data-src="{{"/assets/bg/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
-              </div>
-              {% endif %}
-              <div class="uk-text-meta uk-margin-small-top  uk-margin-bottom">{{ link.name }} ({{ link.datum | date: "%d.%m.%Y" }})</br>
+          {% if link.bild %}
+          <div class="uk-card-media-bottom">
+            <img data-src="{{"/assets/pic/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
+          </div>
+          {% endif %}
+          <div class="uk-card-body">
+            {% assign textsize = link.kurztext.size %}
+            <div class="sh-quote {% if textsize > 200 %}sh-quote-long{% endif %}">{{ link.kurztext | markdownify }}
+                {% if link.text %}
+                <div style="font-size: 3rem" class="uk-align-right"><a href="#popup-{{ file }}" uk-toggle><i class="fas fa-info-circle"></i></a></div>
+                {% endif %}
+            </div>
+            <div class=" uk-margin-small-top  uk-margin-bottom"><div>{{ link.name }}</div>
+            <div class="uk-text-meta">
                  {% if link.funktion %}
                    {{ link.funktion }}
                  {% endif %}
@@ -57,19 +62,35 @@ layout: mosaic
                  - {{ link.verein }}
                  {% endif %}
               </div>
-              <div>{{ link.text | markdownify }}</div>
             </div>
-            <div class="uk-position-top-right uk-padding-small">
+            {% if link.text %}
+            <div id="popup-{{ file }}" class="uk-flex-top"  uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <h2 class="uk-modal-title">{{ link.titel }}</h2>
+                    <div class="uk-margin-small-top  uk-margin-bottom"><div>{{ link.name }}</div>
+                    <div class="uk-text-meta">
+                        {% if link.funktion %}
+                          {{ link.funktion }}
+                        {% endif %}
+                        {% if link.verein %}
+                        - {{ link.verein }}
+                        {% endif %}
+                     </div>
+                     </div>
+                    {{ link.text | markdownify }}
+                    <div class="uk-text-right">{{ link.datum | date: "%d.%m.%Y" }}</div>
+                </div>
+            </div>
+            {% endif %}
+            </div>
+            <div class="uk-position-top-right uk-text-muted uk-padding-small" style="text-shadow: 0px 0px 16px #ffffffbf;">
               {% for tag in link.tags %}
               &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
               {% endfor %}
             </div>
           </a>
-          <div class="uk-position-bottom-right uk-padding-small">
-            <a style="color: rgba(128,128,128,0.2)"
-              href="{{ "https://github.com/heimschulung/heimschulung.github.io/edit/master/_data/links/" | append: file | append: ".yaml" }}"
-              target="_blank"><i class="fas fa-pencil-alt"></i></a>
-          </div>
         </div>
       </li>
       {% endfor %}
