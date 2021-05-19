@@ -36,6 +36,61 @@ layout: mosaic
   <div class="uk-container uk-container-xlarge">
     <ul class="js-filter uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l"
       uk-grid="masonry: true" uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 100;">
+      {% for link_hash in site.data.tops %}
+      {% assign file = link_hash[0] %}
+      {% assign link = link_hash[1] %}
+      <li data-tags="{% for tag in link.tags %}{{ tag }} {% endfor %}" data-date="{{ link.datum }}"">
+        <div class=" uk-card uk-card-default">
+          {% if link.bild %}
+          <div class="uk-card-media-bottom">
+            <img data-src="{{"/assets/pic/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
+          </div>
+          {% endif %}
+          <div class="uk-card-body">
+            {% assign textsize = link.kurztext.size %}
+            <div class="sh-quote {% if textsize > 200 %}sh-quote-long{% endif %}">{{ link.kurztext | markdownify }}
+                {% if link.text %}
+                <div style="font-size: 3rem" class="uk-align-right"><a href="#popup-{{ file }}" uk-toggle><i class="fas fa-info-circle"></i></a></div>
+                {% endif %}
+            </div>
+            <div class="sh-author uk-margin-small-top"><div>{{ link.name }}</div>
+            <div class="uk-text-meta">
+                 {% if link.funktion %}
+                   {{ link.funktion }}
+                 {% endif %}
+                 {% if link.verein %}
+                 - {{ link.verein }}
+                 {% endif %}
+              </div>
+            </div>
+            <div class="uk-position-top-right uk-text-muted uk-padding-small" style="text-shadow: 0px 0px 16px #ffffffbf;">
+                {% for tag in link.tags %}
+                &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
+                {% endfor %}
+            </div>
+            {% if link.text %}
+            <div id="popup-{{ file }}" class="uk-flex-top"  uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <h2 class="uk-modal-title">{{ link.titel }}</h2>
+                    <div class="uk-margin-small-top"><div>{{ link.name }}</div>
+                        <div class="uk-text-meta">
+                            {% if link.funktion %}
+                            {{ link.funktion }}
+                            {% endif %}
+                            {% if link.verein %}
+                            - {{ link.verein }}
+                            {% endif %}
+                        </div>
+                     </div>
+                    {{ link.text | markdownify }}
+                    <div class="uk-text-right">{{ link.datum | date: "%d.%m.%Y" }}</div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+      </li>
+      {% endfor %}
       {% for link_hash in site.data.links %}
       {% assign file = link_hash[0] %}
       {% assign link = link_hash[1] %}
