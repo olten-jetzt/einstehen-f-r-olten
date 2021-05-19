@@ -1,6 +1,3 @@
-person:
-  icon: fas fa-home
-  titl: Personen
 sport:
   icon: fas fa-running
   titl: Sport
