@@ -2,14 +2,14 @@ sport:
   icon: fas fa-running
   titl: Sport
 politik:
-  icon: far fa-tv-retro
+  icon: fas fa-landmark
   titl: Politik
 kunst:
   icon: fas fa-theater-masks
   titl: Kunst
 bildung:
-  icon: fas fa-language
+  icon: fas fa-chalkboard-teacher"
   titl: Bildung
 gewerbe:
-  icon: fas fa-microscope
+  icon: fas fa-industry
   titl: Gewerbe
