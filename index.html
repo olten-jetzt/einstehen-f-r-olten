@@ -42,8 +42,8 @@ layout: mosaic
       <li data-tags="{% for tag in link.tags %}{{ tag }} {% endfor %}" data-date="{{ link.datum }}"">
         <div class=" uk-card uk-card-default">
           {% if link.bild %}
-          <div class="uk-card-media-bottom">
-            <img data-src="{{"/assets/pic/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
+          <div class="uk-card-media-top">
+            <img style="width: 100%" data-src="{{"/assets/pic/" | append: file | append: ".jpeg" | relative_url }}" alt="" uk-img/>
           </div>
           {% endif %}
           <div class="uk-card-body">
