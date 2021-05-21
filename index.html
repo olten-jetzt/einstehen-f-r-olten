@@ -50,7 +50,7 @@ layout: mosaic
             {% assign textsize = link.kurztext.size %}
             <div class="sh-quote {% if textsize > 200 %}sh-quote-long{% endif %}{% if textsize > 400 %}er{% endif %}">{{ link.kurztext | markdownify }}
                 {% if link.text %}
-                <div style="font-size: 3rem" class="uk-align-right"><a href="#popup-{{ file }}" uk-toggle><i class="fas fa-info-circle"></i></a></div>
+                <div style="font-size: 3rem;margin-bottom: -2rem;" class="uk-align-right"><a href="#popup-{{ file }}" uk-toggle><i class="fas fa-info-circle"></i></a></div>
                 {% endif %}
             </div>
             <div class="sh-author uk-margin-small-top"><div>{{ link.name }}</div>
@@ -59,11 +59,11 @@ layout: mosaic
                    {{ link.funktion }}
                  {% endif %}
                  {% if link.verein %}
-                 ; {{ link.verein }}
+                 <br/>{{ link.verein }}
                  {% endif %}
               </div>
             </div>
-            <div class="uk-position-top-right uk-text-muted uk-padding-small" style="text-shadow: 0px 0px 16px #ffffffbf;">
+            <div class="uk-position-top-right uk-padding-small sh-tags{% if link.whitetag %} sh-tag-white{% endif %}">
                 {% for tag in link.tags %}
                 &nbsp;<i class="{{ site.data.tags[tag].icon }}"></i>
                 {% endfor %}
@@ -84,7 +84,7 @@ layout: mosaic
                             {{ link.funktion }}
                             {% endif %}
                             {% if link.verein %}
-                            ; {{ link.verein }}
+                            <br/>{{ link.verein }}
                             {% endif %}
                         </div>
                      </div>
