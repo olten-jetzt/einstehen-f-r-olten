@@ -36,6 +36,9 @@ $overlay-default-background: rgba($global-background, 0.7);
 .sh-quote-long {
     font-size: 130%;
 }
+.sh-quote-long.sh-quote-verylong {
+    font-size: 110%;
+}
 
 .sh-author {
     font-weight: 300;
