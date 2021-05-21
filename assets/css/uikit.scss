@@ -44,6 +44,14 @@ $overlay-default-background: rgba($global-background, 0.7);
     font-weight: 300;
 }
 
+.sh-tags {
+    color: #888;
+}
+
+.sh-tags.sh-tag-white {
+    color: #fff;
+}
+
 nav h1, nav h4 {
     text-shadow: 0 0 11px #494942;
 }
