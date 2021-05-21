@@ -33,8 +33,11 @@ $overlay-default-background: rgba($global-background, 0.7);
     hyphens: auto;
     font-style: italic;
 }
-.sh-quote-long {
+.sh-quote.sh-quote-long {
     font-size: 130%;
+}
+.sh-quote.sh-quote-longer {
+    font-size: 110%;
 }
 
 .sh-author {
