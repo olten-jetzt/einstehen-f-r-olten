@@ -48,7 +48,7 @@ layout: mosaic
           {% endif %}
           <div class="uk-card-body">
             {% assign textsize = link.kurztext.size %}
-            <div class="sh-quote {% if textsize > 200 %}sh-quote-long{% endif %}{% if textsize > 400 %}sh-quote-verylong{% endif %}">{{ link.kurztext | markdownify }}
+            <div class="sh-quote {% if textsize > 200 %}sh-quote-long{% endif %}{% if textsize > 400 %}er{% endif %}">{{ link.kurztext | markdownify }}
                 {% if link.text %}
                 <div style="font-size: 3rem" class="uk-align-right"><a href="#popup-{{ file }}" uk-toggle><i class="fas fa-info-circle"></i></a></div>
                 {% endif %}
