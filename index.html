@@ -72,6 +72,11 @@ layout: mosaic
             <div id="popup-{{ file }}" class="uk-flex-top"  uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
                     <button class="uk-modal-close-default" type="button" uk-close></button>
+                    {% if link.textbild %}
+                    <div class="uk-card-media-top">
+                      <img style="width: 100%" data-src="{{"/assets/pic/" | append: file | append: "-txt.jpeg" | relative_url }}" alt="" uk-img/>
+                    </div>
+                    {% endif %}
                     <h2 class="uk-modal-title">{{ link.titel }}</h2>
                     <div class="uk-margin-small-top"><div>{{ link.name }}</div>
                         <div class="uk-text-meta">
