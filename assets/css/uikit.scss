@@ -73,7 +73,9 @@ $overlay-default-background: rgba($global-background, 0.7);
         }
     }
 }
-
+.oe-nobreak {
+    white-space: nowrap;
+}
     /* Phone portrait and smaller */
     @media (max-width: $breakpoint-xsmall-max) {
 
