@@ -95,6 +95,12 @@ $overlay-default-background: rgba($global-background, 0.7);
     p {
         font-size: 110%;
     }
+    @media (min-width: $breakpoint-xsmall-max) {
+        img {
+            padding-top: 6ex;
+        }
+    }
+    
 }
 
     /* Phone portrait and smaller */
