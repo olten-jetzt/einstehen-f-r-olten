@@ -1,7 +1,16 @@
 <div class="uk-container-liquid uk-margin-bottom">
   <div class="eo-hero uk-container">
     <img src="assets/images/titelbild.jpg">
-    <h1>{{ site.title | escape }}</h1>
-    <h2>{{ site.when | escape }}<br>{{ site.what | escape }}</h2>
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 500 200"
+      preserveAspectRatio="xMinYMin meet"
+    >
+      <foreignObject width="100%" height="100%">
+        <h1>{{ site.title | escape }}</h1>
+        <h2>{{ site.when | escape }}<br>{{ site.what | escape }}</h2>
+      </foreignObject>
+    </svg>
   </div>
 </div>
