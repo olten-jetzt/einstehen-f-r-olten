@@ -24,19 +24,41 @@ $overlay-default-background: rgba($global-background, 0.7);
 
 .eo-hero {
     position: relative;
+    line-height: 95%;
     h1,h2 {
         position: absolute;
         font-weight: bold;
         text-transform: uppercase;
+        left: 10%;
     }
     h1 {
-        font-size: 4rem;
-        top: 4ex;
-        max-width: 12em;
+        font-size: 6.5rem;
+        top: 1ex;
+        max-width: 7em;
     }
     h2 {
-        font-size: 3rem;
-        bottom: 8ex;
-        max-width: 7em;
+        font-size: 4rem;
+        bottom: 3ex;
+        max-width: 6em;
+    }
+    /* Phone portrait and smaller */
+    @media (max-width: $breakpoint-xsmall-max) {
+
+    }
+
+    /* Phone landscape and smaller */
+    @media (max-width: $breakpoint-small-max) {
+
+    }
+
+    /* Tablet landscape and smaller */
+    @media (max-width: $breakpoint-medium-max) {
+
+    }
+
+    /* Desktop and smaller */
+    @media (max-width: $breakpoint-large-max) {
+
+
     }
 }
