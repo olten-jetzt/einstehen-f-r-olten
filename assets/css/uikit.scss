@@ -21,39 +21,22 @@ $overlay-default-background: rgba($global-background, 0.7);
 // 4. Import UIkit.
 @import "uikit-theme.scss";
 
-.select-shadow {
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-}
-
-.sh-quote {
-    font-size: 150%;
-    font-family: 'Fanwood Text', serif;
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    font-style: italic;
-}
-.sh-quote.sh-quote-long {
-    font-size: 130%;
-}
-.sh-quote.sh-quote-longer {
-    font-size: 110%;
-}
-
-.sh-author {
-    font-weight: 300;
-}
-
-.sh-tags {
-    color: #888;
-}
-
-.sh-tags.sh-tag-white {
-    color: #fff;
-}
 
 .eo-hero {
-    background-image: url(/assets/images/titelbild.jpg);
-    background-size: cover;
-    text-shadow: 0 0 11px #494942;
+    position: relative;
+    h1,h2 {
+        position: absolute;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h1 {
+        font-size: 4rem;
+        top: 4ex;
+        max-width: 12em;
+    }
+    h2 {
+        font-size: 3rem;
+        bottom: 8ex;
+        max-width: 7em;
+    }
 }
