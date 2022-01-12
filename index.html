@@ -7,18 +7,20 @@ layout: main
         {% for argu in site.data.argus %}
         {% capture slide %}{% cycle 'odd', 'even' %}{% endcapture %}
         {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
-        <div class="uk-card uk-card-default 
-            uk-grid-collapse uk-child-width-1-2@s uk-margin" 
-            uk-grid 
-            uk-scrollspy="cls: uk-animation-slide-{{slide}}; repeat: true">
-            <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
-                <img src="assets/images/{{ argu.image }}.jpg" alt="" uk-cover>
-                <canvas width="400" height="800"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">{{ argu.title }}</h3>
-                    {{ argu.body | markdownify }}
+        <div>
+            <div class="uk-card uk-card-default 
+                uk-grid-collapse uk-child-width-1-2@s uk-margin" 
+                uk-grid 
+                uk-scrollspy="cls: uk-animation-slide-{{slide}}; repeat: true">
+                <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
+                    <img src="assets/images/{{ argu.image }}.jpg" alt="" uk-cover>
+                    <canvas width="400" height="800"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">{{ argu.title }}</h3>
+                        {{ argu.body | markdownify }}
+                    </div>
                 </div>
             </div>
         </div>
