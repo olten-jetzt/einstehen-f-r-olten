@@ -3,7 +3,7 @@ layout: main
 ---
 
 <div class="uk-container">
-    <div class="uk-child-width-1-2@m" uk-grid>
+    <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
         {% for argu in site.data.argus %}
         {% capture slide %}{% cycle 'odd', 'even' %}{% endcapture %}
         {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
