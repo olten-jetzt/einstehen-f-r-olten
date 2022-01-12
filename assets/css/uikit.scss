@@ -85,6 +85,11 @@ $overlay-default-background: rgba($global-background, 0.7);
     p {
         hyphens: auto;
     }
+    @media (min-width: $breakpoint-xsmall-max) {
+        img {
+            padding-top: 6ex;
+        }
+    }
 
 }
 
@@ -95,11 +100,7 @@ $overlay-default-background: rgba($global-background, 0.7);
     p {
         font-size: 110%;
     }
-    @media (min-width: $breakpoint-xsmall-max) {
-        img {
-            padding-top: 6ex;
-        }
-    }
+    
     
 }
 
