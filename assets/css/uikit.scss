@@ -34,10 +34,10 @@ $overlay-default-background: rgba($global-background, 0.7);
     }
 
     .wir,.olten {
-        top: 5%;
+        top: 65%;
     }
     .ja,.am {
-        bottom: -95%;
+        bottom: -2010%;
     }
     .wir {
         left: 5%;
@@ -59,7 +59,13 @@ $overlay-default-background: rgba($global-background, 0.7);
         text-align: right;
     }
     @media (max-width: $breakpoint-large-max) {
-        font-size: 5wh;
+        font-size: 5vw;
+        .wir,.olten {
+            top: 4vw;
+        }
+        .ja,.am {
+            bottom: -87vw;
+        }
     }
 }
 
