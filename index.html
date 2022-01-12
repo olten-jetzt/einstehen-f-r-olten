@@ -12,7 +12,9 @@ layout: main
                 uk-grid 
                 uk-scrollspy="cls: uk-animation-slide-{{orient}}; repeat: true">
                 <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
-                    <img src="assets/images/{{ argu.image }}.jpg" alt="">
+                    <div class="uk-padding">
+                        <img src="assets/images/{{ argu.image }}.jpg" alt="">
+                    <div>
                 </div>
                 <div>
                     <div class="uk-card-body">
