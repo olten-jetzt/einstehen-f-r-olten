@@ -2,10 +2,19 @@
 layout: main
 ---
 
+<div class="uk-container">
 {% for argu in site.data.argus %}
-<div class="oe-argu uk-container">
-<h2>{{ argu.title }}</h2>
-<img src="assets/images/{{ argu.image }}.jpg">
-<div>{{ argu.body | markdownify }}</div>    
-</div>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card-media-{% cycle 'left', 'right' %} uk-cover-container">
+            <img src="assets/images/{{ argu.image }}.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">{{ argu.title }}</h3>
+                <p>{{ argu.body | markdownify }}</p>
+            </div>
+        </div>
+    </div>
 {% endfor %}
+</div>
