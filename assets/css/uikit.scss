@@ -85,6 +85,7 @@ $overlay-default-background: rgba($global-background, 0.7);
     p {
         hyphens: auto;
     }
+
 }
 
 .oe-final {
@@ -93,6 +94,11 @@ $overlay-default-background: rgba($global-background, 0.7);
     }
     p {
         font-size: 110%;
+    }
+    @media (max-width: $breakpoint-xsmall-max) {
+        img {
+            margin-top: 6ex;
+        }
     }
 }
 
