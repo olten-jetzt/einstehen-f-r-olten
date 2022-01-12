@@ -36,28 +36,31 @@ $overlay-default-background: rgba($global-background, 0.7);
             line-height: 100%;
         }
         .wir,.olten {
-            font-size: 6.5rem;
-            top: 100px;
+            font-size: 4rem;
+            top: 40px;
         }
         .ja,.am {
-            font-size: 4.5rem;
-            bottom: 100px;
+            bottom: 40px;
         }
         .wir {
-            left: 100px;
+            left: 40px;
             width: 5em;
         }
         .olten {
-            right: 100px;
-            width: 10em;
+            right: 40px;
+            width: 3em;
+            text-align: right;
         }
         .ja {
-            left: 100px;
-            width: 10em;
+            font-size: 8.5rem;
+            left: 40px;
+            width: 3em;
         }
         .am {
-            right: 100px;
-            width: 10em;
+            font-size: 4rem;
+            right: 40px;
+            width: 2em;
+            text-align: right;
         }
     }
 }
