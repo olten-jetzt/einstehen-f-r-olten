@@ -95,7 +95,7 @@ $overlay-default-background: rgba($global-background, 0.7);
     p {
         font-size: 110%;
     }
-    @media (max-width: $breakpoint-xsmall-max) {
+    @media (min-width: $breakpoint-xsmall-max) {
         img {
             margin-top: 6ex;
         }
