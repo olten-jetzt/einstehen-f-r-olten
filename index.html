@@ -2,3 +2,10 @@
 layout: main
 ---
 
+{% for argu in site.data.argus %}
+<div class="oe-argu uk-container">
+<h2>{{ argu.title }}</h2>
+<img src="assets/images/{{ argu.image }}.jpg">
+<div>{{ argu.body | markdownify }}</div>    
+</div>
+{% endfor %}
