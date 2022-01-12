@@ -5,11 +5,12 @@ layout: main
 <div class="uk-container">
     <div class="uk-child-width-1-2@m" uk-grid>
         {% for argu in site.data.argus %}
-        {% capture orient %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% capture slide %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
         <div class="uk-card uk-card-default 
             uk-grid-collapse uk-child-width-1-2@s uk-margin" 
             uk-grid 
-            uk-scrollspy="cls: uk-animation-slide-{{orient}}; repeat: true">
+            uk-scrollspy="cls: uk-animation-slide-{{slide}}; repeat: true">
             <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
                 <img src="assets/images/{{ argu.image }}.jpg" alt="" uk-cover>
                 <canvas width="400" height="800"></canvas>
@@ -17,7 +18,7 @@ layout: main
             <div>
                 <div class="uk-card-body">
                     <h3 class="uk-card-title">{{ argu.title }}</h3>
-                    <p>{{ argu.body | markdownify }}</p>
+                    {{ argu.body | markdownify }}
                 </div>
             </div>
         </div>
