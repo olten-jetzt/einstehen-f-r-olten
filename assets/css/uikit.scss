@@ -25,6 +25,7 @@ $overlay-default-background: rgba($global-background, 0.7);
 .eo-hero {
     position: relative;
     color: #000;
+    font-size: 4rem;
     .wir,.olten,.ja,.am {
         position: absolute;
         font-weight: bold;
@@ -33,60 +34,32 @@ $overlay-default-background: rgba($global-background, 0.7);
     }
 
     .wir,.olten {
-        font-size: 4rem;
-        top: 40px;
+        top: 5%;
     }
     .ja,.am {
-        bottom: 40px;
+        bottom: -95%;
     }
     .wir {
-        left: 40px;
+        left: 5%;
         width: 5em;
     }
     .olten {
-        right: 40px;
+        right: 5%;
         width: 3em;
         text-align: right;
     }
     .ja {
-        font-size: 8.5rem;
-        left: 40px;
+        font-size: 210%;
+        left: 5%;
         width: 3em;
     }
     .am {
-        font-size: 4rem;
-        right: 40px;
+        right: 5%;
         width: 2em;
         text-align: right;
     }
     @media (max-width: $breakpoint-large-max) {
-        .wir,.olten {
-            font-size: 4rem;
-            top: 40px;
-        }
-        .ja,.am {
-            bottom: 40px;
-        }
-        .wir {
-            left: 40px;
-            width: 5em;
-        }
-        .olten {
-            right: 40px;
-            width: 3em;
-            text-align: right;
-        }
-        .ja {
-            font-size: 8.5rem;
-            left: 40px;
-            width: 3em;
-        }
-        .am {
-            font-size: 4rem;
-            right: 40px;
-            width: 2em;
-            text-align: right;
-        }
+        font-size: 5wh;
     }
 }
 
