@@ -37,26 +37,26 @@ $overlay-default-background: rgba($global-background, 0.7);
         }
         .wir,.olten {
             font-size: 6.5rem;
-            top: 5ex;
+            top: 100px;
         }
         .ja,.am {
             font-size: 4.5rem;
-            bottom: 5ex;
+            bottom: 100px;
         }
         .wir {
-            right: 1em;
-            width: 10em;
+            left: 100px;
+            width: 5em;
         }
         .olten {
-            left: 1em;
+            right: 100px;
             width: 10em;
         }
         .ja {
-            right: 1em;
+            left: 100px;
             width: 10em;
         }
         .am {
-            left: 1em;
+            right: 100px;
             width: 10em;
         }
     }
