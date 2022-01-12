@@ -58,13 +58,18 @@ $overlay-default-background: rgba($global-background, 0.7);
         width: 2em;
         text-align: right;
     }
-    @media (max-width: $breakpoint-large-max) {
+    @media (max-width: $breakpoint-medium-max) {
         font-size: 5vw;
         .wir,.olten {
             top: 4vw;
         }
         .ja,.am {
             bottom: -87vw;
+        }
+    }
+    @media (max-width: $breakpoint-xsmall-max) {
+        .ja,.am {
+            bottom: -85vw;
         }
     }
 }
