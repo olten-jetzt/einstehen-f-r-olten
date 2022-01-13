@@ -79,9 +79,7 @@ $overlay-default-background: rgba($global-background, 0.7);
 
 .oe-argus {
     h2 {
-        @media (min-width: $breakpoint-medium-max) { 
-            right: 5%;
-        }
+        left: 5%;
     }
     h2,h3 {
         font-weight: bold;
@@ -98,13 +96,14 @@ $overlay-default-background: rgba($global-background, 0.7);
 
 }
 
-.oe-final {
-    @media (min-width: $breakpoint-medium-max) { 
-        right: 5%;
-        left: 5%;
-    }
+.oe-final {    
     h2 {
         font-weight: bold;
+        left: 5%;        
+    }
+    > div {
+        right: 5%;
+        left: 5%;        
     }
     p {
         font-size: 110%;
