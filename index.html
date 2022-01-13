@@ -2,12 +2,12 @@
 layout: main
 ---
 
-<div class="oe-argus uk-container uk-margin-large-top uk-padding-large uk-padding-remove-horizontal">
+<div class="oe-argus uk-container uk-grid-collapse uk-margin-large-top uk-padding-large uk-padding-remove-horizontal">
     <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
         {% for argu in site.data.argus %}
         {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
         <div>
-            <div class="uk-card uk-card-default 
+            <div class="uk-card 
                 uk-grid-collapse uk-child-width-1-2@s uk-margin" 
                 uk-grid 
                 uk-scrollspy="cls: uk-animation-slide-{{orient}}; repeat: true">
