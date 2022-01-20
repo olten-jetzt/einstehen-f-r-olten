@@ -1,4 +1,3 @@
-## 
 Aktuell hört man von der Gegnerschaft des Budgets viele Argumente für ein Nein zum Budget 2022. Gebetsmühlenartig werden primär fünf Aussagen wiederholt. Die Fakten dazu bleiben sie leider meistens schuldig. Schauen wir sie uns doch einmal genauer an: 
 
 
