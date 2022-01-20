@@ -109,6 +109,7 @@ layout: main
     <h2>Fünf Argumente gegen das Budget (und was dahintersteckt)</h2>
     <div><i>von Benjamin Mühleisen</i></div>
     <div class="uk-column-1-2@s">
-        {% include fuenfargs.md | markdownify %}
+        {% capture fuenargs %}{% include fuenfargs.md %}{% endcapture %}
+        {{ fuenfargs | markdownify }}
     </div>
 </div>
