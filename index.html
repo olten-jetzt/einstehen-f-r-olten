@@ -6,63 +6,60 @@ layout: main
 
 <div class="oe-argus uk-container uk-margin-large-top uk-padding-large uk-padding-remove-horizontal">
     <ul uk-accordion>
-    <li>
-        <a class="uk-accordion-title" href="#">Warum das Budget 2022 eine Gute Sache ist</a>
-        <div class="uk-accordion-content uk-child-width-1-2@m uk-grid-collapse  uk-grid-match"
-            uk-scrollspy="target: .uk-card; cls: uk-animation-fade; delay: 500;"
-            uk-grid
-        >
-            {% for argu in site.data.argus %}
-            {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
-            <div>
-                <div class="uk-card 
-                    uk-grid-collapse uk-child-width-1-2@s uk-margin" 
-                    uk-scrollspy-class="uk-animation-slide-{{orient}}"
-                    uk-grid 
-                    >
-                    <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
-                        <div class="uk-padding-small">
-                            <img src="assets/images/{{ argu.image }}.jpg" alt="">
+        <li>
+            <h2><a class="uk-accordion-title" href="#">Warum das Budget 2022 eine Gute Sache ist</a></h2>
+            <div class="uk-accordion-content uk-child-width-1-2@m uk-grid-collapse  uk-grid-match"
+                uk-scrollspy="target: .uk-card; cls: uk-animation-fade; delay: 500;" uk-grid>
+                {% for argu in site.data.argus %}
+                {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
+                <div>
+                    <div class="uk-card 
+                    uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-scrollspy-class="uk-animation-slide-{{orient}}"
+                        uk-grid>
+                        <div
+                            class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
+                            <div class="uk-padding-small">
+                                <img src="assets/images/{{ argu.image }}.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">{{ argu.title }}</h3>
-                            {{ argu.body | markdownify }}
+                        <div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title">{{ argu.title }}</h3>
+                                {{ argu.body | markdownify }}
+                            </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-    </li>
+        </li>
     </ul>
 </div>
 
 <div class="oe-final uk-container">
     <h2>Geschätzte Oltnerinnen und Oltner</h2>
     <div class="uk-column-1-2@s">
-<p>Vergangenen November hat das
-Oltner Gemeindeparlament
-dem Budget 2022 mit 21 zu 14
-Stimmen bei 5 Enthaltungen
-zugestimmt. Auch der Stadtrat
-hat sich dafür ausgesprochen.
-Das letzte Wort haben aber wir,
-die Oltner Stimmbevölkerung,
-am 13.Februar.</p>
+        <p>Vergangenen November hat das
+            Oltner Gemeindeparlament
+            dem Budget 2022 mit 21 zu 14
+            Stimmen bei 5 Enthaltungen
+            zugestimmt. Auch der Stadtrat
+            hat sich dafür ausgesprochen.
+            Das letzte Wort haben aber wir,
+            die Oltner Stimmbevölkerung,
+            am 13.Februar.</p>
 
-<p>Wir sind überzeugt: Wir brauchen
-die im Budget vorgesehene Steueranpassung. Nur damit können wir die wichtigen Projekte
-für Olten umsetzen und in die Zukunft investieren. Leisten wir
-unseren Beitrag für eine gut funktionierende, moderne und nachhaltige Stadt und überlassen wir
-die Rechnung nicht unseren Kindern.</p>
+        <p>Wir sind überzeugt: Wir brauchen
+            die im Budget vorgesehene Steueranpassung. Nur damit können wir die wichtigen Projekte
+            für Olten umsetzen und in die Zukunft investieren. Leisten wir
+            unseren Beitrag für eine gut funktionierende, moderne und nachhaltige Stadt und überlassen wir
+            die Rechnung nicht unseren Kindern.</p>
 
-<p>Stehen wir gemeinsam ein für Olten
-und verhindern ein Jahr Stillstand.
-Stimmen wir am 13. Februar JA zum
-Budget 2022!</p>
-</div>
+        <p>Stehen wir gemeinsam ein für Olten
+            und verhindern ein Jahr Stillstand.
+            Stimmen wir am 13. Februar JA zum
+            Budget 2022!</p>
+    </div>
 </div>
 
 <div class="oe-final uk-container uk-margin-large-top">
@@ -71,43 +68,45 @@ Budget 2022!</p>
     <div class="uk-column-1-2@s">
 
 
-<p>Durch die geplanten Investitionen
-steigt die Standortattraktivität von
-Olten. Davon profitiert auch die
-lokale Wirtschaft. Eine Stadt mit
-einer modernen Infrastruktur ist
-ein idealer Wohn- und Arbeitsort
-für Mitarbeitende. Ein attraktives
-Stadtbild, angefangen beim neuen
-Bahnhofplatz, zieht Kundschaft
-an. Deshalb setzt sich ein breit abgestütztes Wirtschaftskomitee
-für ein JA zum Budget 2022 ein.</p>
+        <p>Durch die geplanten Investitionen
+            steigt die Standortattraktivität von
+            Olten. Davon profitiert auch die
+            lokale Wirtschaft. Eine Stadt mit
+            einer modernen Infrastruktur ist
+            ein idealer Wohn- und Arbeitsort
+            für Mitarbeitende. Ein attraktives
+            Stadtbild, angefangen beim neuen
+            Bahnhofplatz, zieht Kundschaft
+            an. Deshalb setzt sich ein breit abgestütztes Wirtschaftskomitee
+            für ein JA zum Budget 2022 ein.</p>
 
-<p><b>KOMITEE</b><br>
-    {% for company in site.data.komitee %}
-    <span class="oe-nobreak">{{ company }}</span>{% if forloop.last %}.{% else %};{% endif %}<br>
-    {% endfor %}
-</p>
+        <p><b>KOMITEE</b><br>
+            {% for company in site.data.komitee %}
+            <span class="oe-nobreak">{{ company }}</span>{% if forloop.last %}.{% else %};{% endif %}<br>
+            {% endfor %}
+        </p>
 
-<p><b>ÖFFENTLICHER INFOANLASS</b><br>
-Am 25.Januar um 20 Uhr findet ein
-öffentlicher Online-Anlass statt:
-Budget 2022 – Folgen für die lokale
-Wirtschaft (<a href="https://us06web.zoom.us/j/86993082880?pwd=R0ZERFFGU0JjTHlheDBvM1VpbVNNUT09">Zoom Link</a>).</p>
-</div>
+        <p><b>ÖFFENTLICHER INFOANLASS</b><br>
+            Am 25.Januar um 20 Uhr findet ein
+            öffentlicher Online-Anlass statt:
+            Budget 2022 – Folgen für die lokale
+            Wirtschaft (<a href="https://us06web.zoom.us/j/86993082880?pwd=R0ZERFFGU0JjTHlheDBvM1VpbVNNUT09">Zoom
+                Link</a>).</p>
+    </div>
 </div>
 
 <div class="uk-container uk-padding-large uk-margin-large-top">
-<div class="uk-child-width-1-2 uk-grid-match" uk-grid>
-    <div>
-        <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 500;">
-            <img src="assets/images/hokey.jpg">
+    <div class="uk-child-width-1-2 uk-grid-match" uk-grid>
+        <div>
+            <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay: 500;">
+                <img src="assets/images/hokey.jpg">
+            </div>
+        </div>
+        <div class="uk-padding-large uk-padding-remove-bottom">
+            <div class="uk-padding-large uk-animation-toggle"
+                uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay: 750;">
+                <img class="uk-animation-shake" src="assets/images/touluse.jpg">
+            </div>
         </div>
     </div>
-    <div class="uk-padding-large uk-padding-remove-bottom">
-        <div class="uk-padding-large uk-animation-toggle" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay: 750;">
-            <img class="uk-animation-shake" src="assets/images/touluse.jpg">
-        </div>
-    </div>
-</div>
 </div>
