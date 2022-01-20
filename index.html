@@ -5,34 +5,38 @@ layout: main
 
 
 <div class="oe-argus uk-container uk-margin-large-top uk-padding-large uk-padding-remove-horizontal">
-<h2>Warum das Budget 2022 eine Gute Sache ist</h2>
-    <div class="uk-child-width-1-2@m uk-grid-collapse  uk-grid-match"
-         uk-scrollspy="target: .uk-card; cls: uk-animation-fade; delay: 500;"
-         uk-grid
-    >
-        {% for argu in site.data.argus %}
-        {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
-        <div>
-            <div class="uk-card 
-                uk-grid-collapse uk-child-width-1-2@s uk-margin" 
-                uk-scrollspy-class="uk-animation-slide-{{orient}}"
-                uk-grid 
-                >
-                <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
-                    <div class="uk-padding-small">
-                        <img src="assets/images/{{ argu.image }}.jpg" alt="">
+    <ul uk-accordion>
+    <li>
+        <a class="uk-accordion-title" href="#">Warum das Budget 2022 eine Gute Sache ist</a>
+        <div class="uk-accordion-content uk-child-width-1-2@m uk-grid-collapse  uk-grid-match"
+            uk-scrollspy="target: .uk-card; cls: uk-animation-fade; delay: 500;"
+            uk-grid
+        >
+            {% for argu in site.data.argus %}
+            {% capture orient %}{% cycle 'left', 'right' %}{% endcapture %}
+            <div>
+                <div class="uk-card 
+                    uk-grid-collapse uk-child-width-1-2@s uk-margin" 
+                    uk-scrollspy-class="uk-animation-slide-{{orient}}"
+                    uk-grid 
+                    >
+                    <div class="{% if orient == 'right' %}uk-flex-last@s {% endif %}uk-card-media-{{orient}} uk-cover-container">
+                        <div class="uk-padding-small">
+                            <img src="assets/images/{{ argu.image }}.jpg" alt="">
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">{{ argu.title }}</h3>
-                        {{ argu.body | markdownify }}
+                    <div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">{{ argu.title }}</h3>
+                            {{ argu.body | markdownify }}
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
+    </li>
+    </ul>
 </div>
 
 <div class="oe-final uk-container">
