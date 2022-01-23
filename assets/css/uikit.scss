@@ -112,6 +112,27 @@ $overlay-default-background: rgba($global-background, 0.7);
     
 }
 
+.oe-supporters {
+    font-size: 140%;
+    margin-bottom: 3ex;
+}
+
+
+.oe-quote {
+    font-size: 130%;
+    margin-top: 5ex;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.oe-author {
+    font-size: 130%;
+    text-align: right;
+    margin-right: 20%;
+    margin-bottom: 5ex;
+    font-style: italic;
+}
+
     /* Phone portrait and smaller */
     @media (max-width: $breakpoint-xsmall-max) {
 
