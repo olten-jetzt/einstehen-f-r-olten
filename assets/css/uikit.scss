@@ -145,6 +145,14 @@ $overlay-default-background: rgba($global-background, 0.7);
     font-style: italic;
 }
 
+@media (max-width: $breakpoint-xsmall-max) {
+    .oe-quote,.oe-author {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
     /* Phone portrait and smaller */
     @media (max-width: $breakpoint-xsmall-max) {
 
