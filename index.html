@@ -91,21 +91,21 @@ layout: main
 
 <div class="oe-final uk-container uk-margin-large-top">
     <h2>Wir sagen JA zum Budget</h2>
-    <div>
+    <div class="oe-supporters">
     {% for pers in site.data.quotes %}
-        <span class="oe-nobreak">{{ pers.who }}</span>{% if forloop.last %}.{% else %},{% endif %}<br>
+        <span class="oe-nobreak">{{ pers.who }}</span>{% if forloop.last %}.{% else %},{% endif %}
     {% endfor %}
     </div> 
     <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider="center: true">
         <ul class="uk-slider-items uk-grid">
             {% for pers in site.data.quotes %}
             {% if pers.quote %}
-            <li class="uk-width-3-4">
+            <li class="uk-width-1-1">
                 <div class="uk-panel">
-                    <div>
+                    <div class="oe-quote">
                         {{ pers.quote }}
                     </div>
-                    <div>
+                    <div class="oe-author">
                         {{ pers.who }}
                     </div>
                     <div class="uk-position-center uk-panel"><h1>1</h1></div>
