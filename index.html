@@ -94,7 +94,7 @@ layout: main
     <div class="oe-supporters">
     {% assign i = 0 %}
     {% for pers in site.data.quotes %}
-        {% if pers.quote %}{% assign i = i | plus:1 %}<a href="#" class="uk-link-text" uk-slider-item="{{ i }}">{% endif %}
+        {% if pers.quote %}<a href="#" class="uk-link-text" uk-slider-item="{{ i }}">{% assign i = i | plus:1 %}{% endif %}
         <span class="oe-nobreak">{{ pers.who }}</span>{% if pers.quote %}</a>{% endif %}{% if forloop.last %}.{% else %},{% endif %}
     {% endfor %}
     </div> 
@@ -105,11 +105,9 @@ layout: main
 
     <div class="uk-margin-large-top uk-position-relative uk-visible-toggle">
         <ul class="uk-slider-items uk-grid">
-            {% assign i = 0 %}
             {% for pers in site.data.quotes %}
             {% if pers.quote %}
-            {% assign i = i | plus:1 %}
-            <li uk-slider-item="{{ i }}" class="uk-width-1-1">
+            <li class="uk-width-1-1">
                 <div class="uk-panel">
                     <div class="oe-quote">
                         {{ pers.quote }}
