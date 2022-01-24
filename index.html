@@ -89,7 +89,7 @@ layout: main
     </div>
 </div>
 
-<div class="oe-final uk-container uk-margin-large-top">
+<div class="oe-final uk-container uk-margin-large-top"  tabindex="-1" uk-slider="autoplay: true">
     <h2>Wir sagen JA zum Budget</h2>
     <div class="oe-supporters">
     {% for pers in site.data.quotes %}
@@ -106,7 +106,7 @@ layout: main
         Bist du auch fürs Budget 2022 und möchtest öffentlich dazu stehen? Wir freuen uns auf deine <a target="_new" href="https://forms.gle/dzL7iTvA5z7zCrfi7">Nachricht</a>!
     </div>
 
-    <div class="uk-margin-large-top uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider="autoplay: true">
+    <div class="uk-margin-large-top uk-position-relative uk-visible-toggle">
         <ul class="uk-slider-items uk-grid">
             {% for pers in site.data.quotes %}
             {% if pers.quote %}
