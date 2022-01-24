@@ -93,7 +93,12 @@ layout: main
     <h2>Wir sagen JA zum Budget</h2>
     <div class="oe-supporters">
     {% for pers in site.data.quotes %}
-        <span class="oe-nobreak">{{ pers.who }}</span>{% if forloop.last %}.{% else %},{% endif %}
+        {% if pers.quote %}
+        <a href="#" class="uk-link-text" uk-slider-item="{{ forloop.index }}">
+        {% endif %}
+        <span class="oe-nobreak">{{ pers.who }}</span>
+        {% if pers.quote %}</a>{% endif %} 
+        {% if forloop.last %}.{% else %},{% endif %}
     {% endfor %}
     </div> 
 
@@ -105,7 +110,7 @@ layout: main
         <ul class="uk-slider-items uk-grid">
             {% for pers in site.data.quotes %}
             {% if pers.quote %}
-            <li class="uk-width-1-1">
+            <li uk-slider-item="{{forloop.index}}" class="uk-width-1-1">
                 <div class="uk-panel">
                     <div class="oe-quote">
                         {{ pers.quote }}
