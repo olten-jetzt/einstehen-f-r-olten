@@ -92,8 +92,9 @@ layout: main
 <div class="oe-final uk-container uk-margin-large-top"  tabindex="-1" uk-slider="autoplay: true">
     <h2>Wir sagen JA zum Budget</h2>
     <div class="oe-supporters">
+    {% assign i = 0 %}
     {% for pers in site.data.quotes %}
-        {% if pers.quote %}<a href="#" class="uk-link-text" uk-slider-item="{{ forloop.index }}">{% endif %}
+        {% if pers.quote %}{% assign i = i | plus:1 %}<a href="#" class="uk-link-text" uk-slider-item="{{ i }}">{% endif %}
         <span class="oe-nobreak">{{ pers.who }}</span>{% if pers.quote %}</a>{% endif %}{% if forloop.last %}.{% else %},{% endif %}
     {% endfor %}
     </div> 
@@ -104,9 +105,11 @@ layout: main
 
     <div class="uk-margin-large-top uk-position-relative uk-visible-toggle">
         <ul class="uk-slider-items uk-grid">
+            {% assign i = 0 %}
             {% for pers in site.data.quotes %}
             {% if pers.quote %}
-            <li uk-slider-item="{{ forloop.index }}" class="uk-width-1-1">
+            {% assign i = i | plus:1 %}
+            <li uk-slider-item="{{ i }}" class="uk-width-1-1">
                 <div class="uk-panel">
                     <div class="oe-quote">
                         {{ pers.quote }}
